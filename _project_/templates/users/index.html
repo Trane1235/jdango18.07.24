@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{%load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style ='background-image:
+url("name");'>
+    {% for item in items%}
+        <div class="image-row">
+            <div class="image-discription">
+                <div>описание</div>
+            </div>
+
+            <div class="image-wraper">
+                <img src="{% static item %}">
+            <img src="{%static 'img/{{item}}'%}">
+        </div>
+    </div>
+    {% endfor %}
+
+</body>
+</html>
