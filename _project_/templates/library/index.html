@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{%static 'css/style.css'%}">
+</head>
+<!--<body style ='background-image: url("name");'>-->
+<body style="background-image: url('{% static "img/nebo.jpg" %}');">
+    {% include 'navBar.html' %}
+
+    {% for message in messages %}
+    <div class="content-wrapper">
+        <hr>
+        <div class="book-wrapper">
+            <div>{{ message.description }}</div>
+            <div>{{ message.author }}</div>
+            <img src="../media/{{message.file}}">
+            <a href="../media/{{message.fileText}}" download>Читать</a>
+        </div>
+        <hr>
+        <hr>
+
+        <hr>
+    </div>
+    {% endfor %}
+
+</body>
+</html>

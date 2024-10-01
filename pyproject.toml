@@ -8,6 +8,8 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.11"
 django = "^5.0.7"
+dj-static = "^0.0.6"
+waitress = "^3.0.0"
 
 
 [build-system]

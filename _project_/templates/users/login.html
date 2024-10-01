@@ -5,6 +5,12 @@
     <title>Title</title>
 </head>
 <body>
-<h1> img src="{%static 'img/cake.jpg'%}" </h1>
+    <div class="form-wrapper">
+        <form method="post">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit">
+        </form>
+    </div>
 </body>
 </html>

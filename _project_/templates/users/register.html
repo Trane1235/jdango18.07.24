@@ -5,11 +5,12 @@
     <title>Title</title>
 </head>
 <body>
-<div class="form-wrapper">
-    <from method="post">
-        {{ from }}
-        <input type="sudmit">
-    </from>
-</div>
+    <div class="form-wrapper">
+        <form method="post">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit">
+        </form>
+    </div>
 </body>
 </html>
