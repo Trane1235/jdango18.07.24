@@ -10,13 +10,18 @@
   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">
 </head>
 <body>
-<ul>
-  <li><a href="{% url 'users_login'%}"> <h3 class="p">вход</h3> </a></li>
-  <li><a href="{% url 'user_register'%}"><h3 class="p"> регистрация </h3> </a></li>
-  <li><a href="{% url 'new_book'%}">Добавить</a></li>
-  <li><a href="{% url 'books' %}">Список</a></li>
-<!--  <li><a href="contact.php">Contact</a></li>-->
-<!--  <li><a href="about.php">About</a></li>-->
-</ul>
+
+<div class="navbar">
+  <div class="navbar-part">
+      <div class="navbar-item" style="margin-right:16px;"> <a href="{% url 'books' %}">главная</a> </div>
+      <div class="navbar-item"> <a href="{% url 'new_book'%}">добавить</a> </div>
+  </div>
+  <div class="navbar-part" style="margin-right: 4rem;">
+      <div class="navbar-item"> <a href="{% url 'users_login'%}">вход</a> </div>
+      <div class="navbar-item"> <a href="{% url 'user_register'%}">регистрация</a> </div>
+  </div>
+</div>
+
 </body>
+
 </html>
