@@ -6,12 +6,11 @@
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="{%static 'css/style.css'%}">
 </head>
-<body>
-{% include 'navBar.html' %}
-<ul>
 
-  <li><a href="{% url 'new_book'%}">Contact</a></li>
-  <li><a href="{% url 'books' %}">About</a></li>
-</ul>
+
+<body class="body-wrapper">
+    {% include 'navBar.html' %}
+    {% block content %} {% endblock %}
 </body>
+
 </html>
